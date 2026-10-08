@@ -1,7 +1,5 @@
-
-
 <?php
-function smaller($zahl1, $zahl2) {
+function smaller(int $zahl1, int $zahl2) {
     if ($zahl1 < $zahl2) {
         return $zahl1;
     } else {

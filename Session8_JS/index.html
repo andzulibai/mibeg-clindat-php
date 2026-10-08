@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 08_JS</title>
+
+</head>
+<body>
+    <h1>Counter App</h1>
+    <style>
+        #btn1{
+           background-color: cornflowerblue; 
+        }
+
+    svg {
+        width: 1em;
+        height: 1em;
+        }
+    </style>
+
+    <div>
+    <p>Zählstand: <span id="currentNum"></span> </p>
+    <input type="number" value="1" id="inc">
+    <button id="btn1">
+            <svg viewBox="0 0 128 128"><title>book-open-solid</title><path d="M67 25q6-9 47-11v88q-21 0-47 12Zm-6 0q-6-9-47-11v89q20 0 47 11Z"/></svg>
+    </button>
+
+    </div>
+    <script>
+
+    //0 Zustand, welche Daten Muss app haben
+    let num = 0;
+    let increment = 1;
+
+    //1. Womit soll es passieren
+    const btn = document.querySelector ("#btn1");
+    const output = document.querySelector ("#currentNum");
+    const input = document.querySelector ("#inc");
+        console.log (btn);
+
+    //2. Was soll es passieren
+    function whenButtonclick (){
+       //num = num + 1;
+      // num =+ 1;
+      increment = Number (input.value);
+       num += increment;
+       output.textContent = num;
+
+    }
+    //3. Es soll passieren sobald...
+        btn.addEventListener (
+            "click",whenButtonclick
+     ) ;
+
+
+    
+    
+    </script>
+
+    
+</body>
+</html>
